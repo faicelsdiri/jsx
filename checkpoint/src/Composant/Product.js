@@ -20,44 +20,74 @@ function Product() {
 {/* card */}
 <CardGroup>
             <Card>
-            <Card.Img variant="top" src = {products.image} alt="logo" />
-            <Card.Body>
-            <Card.Title>{products.name}</Card.Title>
-            <Card.Text>
-            {products.description}
-            </Card.Text>
-            </Card.Body>
-            <Card.Footer>
-            <small className="text-muted">{products.price}</small>
-            </Card.Footer>
+
+                    {!products.name && (
+                    <Card.Img variant="top" src = {products.images} alt="photo de foulen" />
+                    )}
+                    {products.name && (
+                    <Card.Img variant="top" src = {products.image} alt="logo" />
+                    )}
+                    <Card.Body>
+                    {!products.name && (
+                    <Card.Title>{ "Hello, there!"}</Card.Title>
+                    )}
+                    {products.name && (
+                    <Card.Title>{ "Hello  "+products.name}</Card.Title>
+                    )}
+                    <Card.Text>
+                    {products.description}
+                    </Card.Text>
+                    </Card.Body>
+                    <Card.Footer>
+                    <small className="text-muted">{products.price}</small>
+                    </Card.Footer>
             </Card>
 
 
             <Card>
-            <Card.Img variant="top" src = {products2.image} />
-            <Card.Body>
-            <Card.Title>{products2.name}</Card.Title>
-            <Card.Text>
-                {products2.description}
-            </Card.Text>
-            </Card.Body>
-            <Card.Footer>
-            <small className="text-muted">{products2.price}</small>
-            </Card.Footer>
+                    {!products2.name && (
+                    <Card.Img variant="top" src = {products2.images} alt="photo de foulen" />
+                    )}
+                    {products2.name && (
+                    <Card.Img variant="top" src = {products2.image} alt="logo" />
+                    )}
+                    <Card.Body>
+                    {!products2.name && (
+                    <Card.Title>{ "Hello, there!"}</Card.Title>
+                    )}
+                    {products2.name && (
+                    <Card.Title>{ "Hello  "+products2.name}</Card.Title>
+                    )}
+                    <Card.Text>
+                        {products2.description}
+                    </Card.Text>
+                    </Card.Body>
+                    <Card.Footer>
+                    <small className="text-muted">{products2.price}</small>
+                    </Card.Footer>
             </Card>
-            <Card>
 
-            <Card.Img variant="top" src = {products3.image} />
-            {/* <img src = {require('./pngegg1.png')}/> */}
-            <Card.Body>
-            <Card.Title>{products3.name}</Card.Title>
-            <Card.Text>
-                {products3.description}
-            </Card.Text>
-            </Card.Body>
-            <Card.Footer>
-            <small className="text-muted">{products3.price}</small>
-            </Card.Footer>
+            <Card>
+                    {!products3.name && (
+                    <Card.Img variant="top" src = {products3.images} alt="photo de foulen" />
+                    )}
+                    {products3.name && (
+                    <Card.Img variant="top" src = {products3.image} alt="logo" />
+                    )}
+                    <Card.Body>
+                    {!products3.name && (
+                    <Card.Title>{ "Hello, there!"}</Card.Title>
+                    )}
+                    {products3.name && (
+                    <Card.Title>{ "Hello  "+products3.name}</Card.Title>
+                    )}
+                    <Card.Text>
+                        {products3.description}
+                    </Card.Text>
+                    </Card.Body>
+                    <Card.Footer>
+                    <small className="text-muted">{products3.price}</small>
+                    </Card.Footer>
             </Card>
     </CardGroup>
             </>
@@ -67,7 +97,7 @@ function Product() {
 
         
 
-         
+
     );
 }
 export default Product;
